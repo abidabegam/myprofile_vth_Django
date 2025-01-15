@@ -1,20 +1,34 @@
-<!-- about.html -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>About Me</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
 <header>
-    <h1>About me</h1>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
 </header>
-<main>
-    <section>
-        <h2>Introduction</h2>
-        <p>{{ about_text }}</p>
-    </section>
-</main>
+
+<section class="about-section">
+    <h1>About Me</h1>
+    <div class="about-container">
+        <p>Hello! I'm Abida Begam Mohammad, a Python Backend Developer with a passion for Artificial Intelligence, Machine Learning, and Web Development. My focus is on building scalable, high-performance backend systems and designing intuitive APIs.</p>
+        <p>I've worked on several projects in the realm of Human Capital Management (HCM), optimizing solutions to enhance the user experience and streamline business processes. I am continuously learning and evolving to incorporate the latest technologies into my work.</p>
+        <p>In my free time, I enjoy reading about the latest advancements in AI, working on personal coding projects, and contributing to open-source communities.</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Abida Begam Mohammad. All rights reserved.</p>
+</footer>
 </body>
 </html>
