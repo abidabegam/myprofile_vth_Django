@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <!-- Correct link to the CSS file -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li> <!-- Updated link using Django URL tag -->
+            <li><a href="{% url 'about' %}">About</a></li> <!-- Updated link to About page -->
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <h1>Welcome to My Profile</h1>
+    <div class="profile-container">
+        <!-- Correct image path -->
+        <img src="{% static 'images/profile.jpg' %}" alt="Abida Begam Mohammad" style="width: 150px; height: 150px; border-radius: 50%;">
+        <h2>Abida Begam Mohammad</h2>
+        <p>Python Backend Developer | Passionate about AI | ML | Web Development</p>
+        <p>Contact: <a href="mailto:abidabegam.mohammad@gmail.com">abidabegam.mohammad@gmail.com</a></p>
+    </div>
+</section>
+
+<footer>
+    <p>Copyright © 2025</p>
+</footer>
+</body>
+</html>
